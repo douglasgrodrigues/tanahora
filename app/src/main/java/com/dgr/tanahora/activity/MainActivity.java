@@ -65,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
                 deslogarUsuario();
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 break;
+
+            case R.id.menuCadastro:
+                //deslogarUsuario();
+                startActivity(new Intent(getApplicationContext(), VeiculoActivity.class));
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

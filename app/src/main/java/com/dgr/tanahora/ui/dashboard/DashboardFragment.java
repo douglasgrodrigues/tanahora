@@ -1,5 +1,6 @@
 package com.dgr.tanahora.ui.dashboard;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +14,24 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.dgr.tanahora.R;
+import com.dgr.tanahora.helper.ConfiguracaoFirebase;
+import com.dgr.tanahora.model.Usuario;
+import com.dgr.tanahora.model.Veiculo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
+    private TextView campoPlacaExibicao;
+
+    private Veiculo veiculo;
+    private DatabaseReference dadosVeiculo;
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -31,7 +46,30 @@ public class DashboardFragment extends Fragment {
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });  */
+        });
+
+
+        //Exibe dados da postagem
+        Uri uriPostagem = Uri.parse(postagem.getCaminhoFoto());
+        Glide.with(VisualizarPostagemActivity.this)
+                .load(uriPostagem)
+                .into(imagePostagemSelecionada);
+        textDescricaoPostagem.setText(postagem.getDescricao());
+
+         */
+
+        //Configuerações iniciais
+        campoPlacaExibicao = view.findViewById(R.id.placaExibicao);
+
+
+
+
+
+
+
         return view;
     }
+
+
+
 }

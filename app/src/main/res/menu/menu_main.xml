@@ -7,4 +7,9 @@
         android:title="Sair"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/menuCadastro"
+        android:title="Cadastrar veículo"
+        app:showAsAction="never"/>
+
 </menu>

@@ -1,6 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageCarroTroca"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/iconecarrotroca" />
+
+        <TextView
+            android:id="@+id/placaExibicao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:text="PLACA"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editDataTroca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/calendar"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Data troca"
+        android:inputType="date"
+        android:textColor="@color/texto"
+        android:textColorHighlight="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <EditText
+        android:id="@+id/editTipoOleo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/oiltroca"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Data troca"
+        android:inputType="text"
+        android:textColor="@color/texto"
+        android:textColorHighlight="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDataTroca" />
+
+    <EditText
+        android:id="@+id/editKmTroca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/kmtroca"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Km troca"
+        android:inputType="text"
+        android:textColor="@color/texto"
+        android:textColorHighlight="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTipoOleo" />
+
+    <EditText
+        android:id="@+id/editKmTroca2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/proximatroca"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Próxima troca"
+        android:inputType="text"
+        android:textColor="@color/texto"
+        android:textColorHighlight="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editKmTroca" />
+
+    <Button
+        android:id="@+id/buttonCadastrarVeiculo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="registrar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editKmTroca2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
