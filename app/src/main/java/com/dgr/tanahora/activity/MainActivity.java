@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         //configurar a toolbar
         Toolbar toolbar = findViewById(R.id.toolbarPrincipal);
-        toolbar.setTitle("Ta na hora?");
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         //configuraçoes de objetos

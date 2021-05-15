@@ -44,7 +44,6 @@ public class VeiculoActivity extends AppCompatActivity {
         //configura nome de exibição do usuario
         nomeUsuario.setText(autenticacao.getCurrentUser().getDisplayName());
 
-
     }
 
 
