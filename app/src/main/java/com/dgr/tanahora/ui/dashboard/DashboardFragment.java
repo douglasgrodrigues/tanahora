@@ -2,6 +2,7 @@ package com.dgr.tanahora.ui.dashboard;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -69,13 +72,13 @@ public class DashboardFragment extends Fragment {
         veiculo = new Veiculo();
 
 
-        String placa = firebaseRef.child("trocas")
-                .child(autenticacao.getCurrentUser().getUid())
-                .child(troca.getId())
+      //  String placa = firebaseRef.child("usuarios")
+      //          .child(autenticacao.getCurrentUser().getUid())
+       //         .child(troca.getId())
 
-                .getKey();
+     //           .getKey();
 
-        campoPlacaExibicao.setText(placa);
+        //campoPlacaExibicao.setText(autenticacao.getCurrentUser().getDisplayName());
 
 
         buttonRegistrarTroca.setOnClickListener(new View.OnClickListener() {

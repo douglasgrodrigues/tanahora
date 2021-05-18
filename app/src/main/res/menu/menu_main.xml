@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/menuCadastro"
+        android:title="Cadastrar veículo"
+        app:showAsAction="never"/>
+
+    <item
         android:id="@+id/menuSair"
         android:title="Sair"
         app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/menuCadastro"
-        android:title="Cadastrar veículo"
-        app:showAsAction="never"/>
+
 
 </menu>
